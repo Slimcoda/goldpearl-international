@@ -1,0 +1,49 @@
+/* src/components/PartnersSlider.css */
+
+.slider-container {
+    width: 100%;
+    overflow: hidden;  /* Hide the overflow to create the scrolling effect */
+    background-color: #f4f4f4;  /* Background color for the slider */
+    padding: 1rem 0;
+  }
+  
+  .slider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: slide 20s linear infinite;  /* Apply animation for sliding effect */
+  }
+  
+  .slider-item {
+    flex: 0 0 auto;
+    padding: 0 1.5rem;
+    opacity: 0.8;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  
+  .slider-item:hover {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  
+  .slider-item img {
+    max-height: 220px;  /* Set a maximum height for the logos */
+    object-fit: contain;
+  }
+  
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  /* Media Query for responsiveness */
+  @media (max-width: 768px) {
+    .slider-item img {
+      max-height: 50px;  /* Adjust logo size for smaller screens */
+    }
+  }
+  
